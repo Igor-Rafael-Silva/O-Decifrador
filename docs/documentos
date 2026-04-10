@@ -1,75 +1,43 @@
-# Documento de Planejamento do Projeto: O Decifrador
+## 2. Estimativas (PP – Planejamento de Projeto) 
 
-**Versão:** 1.0  
-**Data:** 8 de abril de 2026  
-**Unidade Organizacional:** Reuel, Rafael, Emanuel e Igor R.  
-**Prazo Total do Projeto:** 1 semana
+ As estimativas foram elaboradas com base na experiência da equipe e na complexidade modular da implementação. 
 
-## 1. O que será desenvolvido
+| Atividade | Horas Estimadas (Codificação) | Horas Estimadas (Testes) | Total Estimado (Horas) | 
 
-O projeto consiste no desenvolvimento de um sistema de criptografia em linguagem **C** baseado na **Cifra de César**, com elementos inspirados na máquina Enigma para fins educacionais.
+| :--- | :---: | :---: | :---: |  
 
-### Funcionalidades principais:
-- Múltiplos alfabetos criptografados pré-definidos, selecionados por meio de uma chave (A, B, C, etc.)
-- Configuração da chave pelo usuário
-- Função de **criptografia**: converte texto claro em texto criptografado
-- Função de **descriptografia**: recupera o texto original utilizando a mesma chave
-- Interface simples via linha de comando com menu interativo
-- Validação de entrada: aceita apenas letras maiúsculas (A–Z)
+| Arquitetura e design dos módulos (Rotor, EnigmaMachine) | 6 | 2 | 8 | 
 
-### Restrições e fora do escopo:
-- Não serão implementados algoritmos de criptografia avançados ou sistemas reais de segurança
-- Não haverá simulação completa da máquina Enigma (rotores dinâmicos, refletor, etc.)
-- Não haverá interface gráfica (GUI)
-- Funciona apenas com letras maiúsculas do alfabeto inglês (A–Z)
-- Não suporta caracteres especiais, acentos ou números
-- Não haverá leitura ou escrita de arquivos
-- Não haverá armazenamento ou persistência de dados
+| Codificação da lógica de um Rotor | 8 | 4 | 12 | 
 
-O projeto tem **finalidade exclusivamente educacional**, com foco na aplicação de conceitos básicos de programação em C e criptografia clássica.
+| Integração da máquina Enigma completa | 10 | 6 | 16 | 
 
-## 2. Estimativas de Esforço
+| Implementação de criptografia e descriptografia | 6 | 4 | 10 |  
 
-| Atividade                                      | Codificação (horas) | Testes (horas) | Total Estimado (horas) |
-|------------------------------------------------|---------------------|----------------|------------------------|
-| Arquitetura e design dos módulos               | 6                   | 2              | 8                      |
-| Codificação da lógica de um Rotor              | 8                   | 4              | 12                     |
-| Integração da máquina Enigma completa          | 10                  | 6              | 16                     |
-| Implementação de criptografia e descriptografia| 6                   | 4              | 10                     |
-| Interface de menu e tratamento de erros        | 4                   | 2              | 6                      |
-| Revisão final e ajustes                        | 4                   | -              | 4                      |
-| **Total Geral**                                | **38**              | **18**         | **56**                 |
+| Interface de menu e tratamento de erros | 4 | 2 | 6 |  
 
-**Esforço Total Estimado:** 56 horas
+| Revisão final e ajustes | 4 | - | 4 |  
 
-## 3. Matriz de Papéis (RACI)
+| **Total Geral** | **38** | **18** | **56** | 
 
-| Atividade / Responsabilidade                          | Gerente de Projeto (Reuel) | Desenvolvedor Principal (Rafael) | Quality Assurance (Emanuel) | Configuration Manager (Igor R.) |
-|-------------------------------------------------------|----------------------------|----------------------------------|-----------------------------|---------------------------------|
-| Elaboração e aprovação do plano de projeto            | R / A                      | C                                | I                           | I                               |
-| Definição e gerenciamento de requisitos               | A                          | R                                | C                           | I                               |
-| Codificação dos algoritmos e módulos                  | I                          | R                                | C                           | I                               |
-| Execução de testes unitários e de integração          | I                          | C                                | R                           | I                               |
-| Revisão por pares e garantia de qualidade             | C                          | I                                | R / A                       | I                               |
-| Gerência de configuração e versionamento (Git)        | I                          | C                                | I                           | R / A                           |
-| Monitoramento do cronograma e controle de riscos      | R / A                      | I                                | C                           | C                               |
-| Homologação e entrega final                           | A                          | C                                | R                           | C                               |
+##3. Matriz de Papéis (RACI)  
 
-**Legenda:**  
-**R** = Responsável | **A** = Aprovador | **C** = Consultado | **I** = Informado
+| Atividade / Responsabilidade | Gerente de Projeto (Reuel) | Desenvolvedor Principal (Rafael) | Quality Assurance (Emanuel) | Configuration Manager (Igor R.) |  
 
-## 4. Plano de Riscos
+| :--- | :---: | :---: | :---: | :---: | | Elaboração e aprovação do plano de projeto | **R / A** | C | I | I |  
 
-| Risco | Descrição | Probabilidade | Impacto | Plano de Mitigação | Plano de Contingência |
-|-------|-----------|---------------|---------|--------------------|-----------------------|
-| 1     | Inconsistência na lógica de rotação dos rotores (descriptografia não reversível) | Média | Alto | Testes unitários desde o início e verificação de reversibilidade após cada merge | Simplificar temporariamente para 1 rotor fixo |
-| 2     | Dificuldade na implementação da interface de menu e tratamento de erros | Baixa | Médio | Desenvolver a lógica central primeiro e realizar revisão por pares | Substituir por comandos sequenciais simples |
-| 3     | Atraso devido à curva de aprendizado da complexidade dos rotores | Média | Alto | Desenvolvimento modular (um rotor por vez) e reuniões diárias curtas | Redistribuir tarefas e reduzir escopo do exemplo demonstrativo |
-| 4     | Problemas com Git (conflitos, perda de código) | Média | Alto | Política clara de commits, branches por funcionalidade e backups locais | Manter cópias locais diárias e usar "main" apenas para versões estáveis |
-| 5     | Desvios de escopo entre requisitos e produto final | Baixa | Médio | Manter matriz de rastreabilidade e revisão final completa | Registrar formalmente qualquer mudança e obter aprovação |
+| Definição e gerenciamento de requisitos | **A** | **R** | C | I |  
 
----
+| Codificação dos algoritmos e módulos | I | **R** | C | I |  
 
-**Observação:** Este documento serve como base para o planejamento e acompanhamento do projeto. Qualquer alteração significativa de escopo deverá ser registrada e aprovada formalmente.
+| Execução de testes unitários e de integração | I | C | **R** | I |  
 
-Pronto para uso no GitHub.
+| Revisão por pares e garantia de qualidade | C | I | **R / A** | I |  
+
+| Gerência de configuração e versionamento (Git) | I | C | I | **R / A** |  
+
+| Monitoramento do cronograma e controle de riscos | **R / A** | I | C | C |  
+
+| Homologação e entrega final | **A** | C | **R** | C | 
+
+ **Legenda RACI:** * **R** = Responsável * **A** = Aprovador * **C** = Consultado * **I** = Informado 
