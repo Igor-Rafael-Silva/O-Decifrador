@@ -3,8 +3,6 @@ A Máquina Enigma foi um dispositivo de cifragem eletromecânico utilizado pela 
 
  Nós criamos um sistema parecido em códigos de programação em "C" e mostraremos um  pouco de como foi a organização e o desenvolvimento do sistema mostrando o Kanban, Documentação 
 
-Esse é o link da [Documentação](https://sesisenaispedu-my.sharepoint.com/:w:/g/personal/reuel_eugenio_portalsesisp_org_br/IQAYXgLF2mHdQbeZ4lTONgECAUjW2zQeAA0mEHe45g3nb08?e=gCQyC1) para ver como foi o planejamento.
-
 ## Kanban
 <img width="866" height="503" alt="captura principal" src="https://github.com/user-attachments/assets/bc3566cf-c779-4516-a107-6bae6892e083" />
 
